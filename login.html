@@ -1,0 +1,45 @@
+<html>
+<head>
+<script type="text/javascript">
+function fun()
+{
+pat=/^_|^@|^\d/;
+pat1= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+u = document.getElementById("t1").value;
+v = document.getElementById("p1").value;
+p=document.getElementById("p2").value;
+//v==" " || u==" "
+if(v.length==0 || u.length==0)
+{
+alert("Both must not be blank");
+}
+else if(v.length<6 || v.length>12)
+{
+alert("Password length must be between 8 to 12");
+}
+else
+{
+alert("Password is strong");
+}
+if(pat.test(u))
+{
+alert("Enter valid username");
+}
+if(pat1.test(p))
+{
+    alert("Valid Email");
+}
+}
+</script>
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset>
+NAME <input type="text" id="t1"/><br><br>
+PASSWORD <input type="password" id="p1"/><br><br>
+EMAIL<input type="text" id="p2"><br><br>
+<input type="submit" onclick="fun()"/>
+</fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<html>
+<head>
+<script type="text/javascript">
+function fun()
+{
+pat=/^_|^@|^\d/;
+pat1= /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+u = document.getElementById("t1").value;
+v = document.getElementById("p1").value;
+p=document.getElementById("p2").value;
+//v==" " || u==" "
+if(v.length==0 || u.length==0)
+{
+alert("Both must not be blank");
+}
+else if(v.length<6 || v.length>12)
+{
+alert("Password length must be between 8 to 12");
+}
+else
+{
+alert("Password is strong");
+}
+if(pat.test(u))
+{
+alert("Enter valid username");
+}
+if(pat1.test(p))
+{
+    alert("Valid Email");
+}
+}
+</script>
+<style>
+    form
+    {
+        display:block;
+        justify-content: center;
+        display: flex;
+         margin-top:150px;
+    }
+        table:hover
+         {
+        background-color:floralwhite;
+        }
+    table,tr,td
+    {
+        padding: 15px;
+        background-color: black;
+        color: white;
+        width: 300px;
+        height: 15px;
+        transition: background-color 2s;
+     }
+    body
+    {
+        background: linear-gradient(to right, rgb(165, 216, 219),rgb(17, 178, 232));
+    }
+</style>
+</head>
+<body>
+    <form action="fsdproject.html" method="post" align="center">
+        <fieldset>
+            <legend>Login</legend>
+            <table>
+<tr>
+    <td style="font-size:20px;">NAME:</td>
+</tr> 
+<tr>
+<td><input type="text" id="t1" style="height:35px;"/></td>
+</tr>
+<tr>
+    <td style="font-size:20px;">PASSWORD:</td>
+</tr>
+<tr>
+    <td><input type="password" id="p1" style="height:35px;"/></td>
+</tr>
+<tr>
+    <td style="font-size:20px;">EMAIL:</td>
+</tr>
+<tr>
+    <td><input type="text" id="p2" style="height:35px;""></td>
+</tr>
+<tr>
+    <td><input type="submit" onclick="fun()" style="height:35px;"/></td>
+</tr>
+</fieldset>
+</table>
+</form>
+</body>
+</html>

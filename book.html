@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie Ticket Booking</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="header">
+		<h1>Movie Ticket Booking</h1>
+	</div>
+	<div class="container">
+		<form>
+            <table>
+            <tr>
+                <td>
+			    <label for="movie">Select a movie:</label>
+                </td>
+            <td>
+			<select id="movie" name="movie">
+				<option value="Uncharted">Uncharted</option>
+				<option value="Sonic The Hedgehog 2">Sonic The Hedgehog 2</option>
+				<option value="Morbius">Morbius</option>
+                <option value="The Adam Project">The Adam Project</option>
+                <option value="Free Guy">Free Guy</option>
+                <option value="The Batman">The Batman</option>
+			</select>
+            </td>
+            </tr>
+            <tr>
+                <td>
+			    <label for="date">Select a date:</label>
+                </td>
+                <td>
+			    <input type="date" id="date" name="date">
+            </td>
+            </tr>
+            <tr>
+                <td>
+			    <label for="time">Select a time:</label>
+                </td>
+                <td>
+			    <select id="time" name="time">
+				<option value="12pm">12pm</option>
+				<option value="3pm">3pm</option>
+				<option value="6pm">6pm</option>
+				<option value="9pm">9pm</option>
+                </td>
+			</select>
+            </tr>
+            <tr>
+                <td>
+			    <label for="seats">Select number of seats:</label>
+                </td>
+                <td>
+			    <input type="number" id="seats" name="seats" min="1" max="10">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Book Now</button>
+                </td>
+             </tr>
+        </table>
+		</form>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
